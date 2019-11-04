@@ -1,5 +1,6 @@
-package br.com.ibm.challenge.domain;
+package br.com.ibm.challenge.domain.caixa;
 
+import br.com.ibm.challenge.domain.EntityId;
 import lombok.Data;
 
 import javax.persistence.Entity;

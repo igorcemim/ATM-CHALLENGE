@@ -1,6 +1,6 @@
 package br.com.ibm.challenge.domain.movimento;
 
-import br.com.ibm.challenge.domain.Conta;
+import br.com.ibm.challenge.domain.cliente.Conta;
 import br.com.ibm.challenge.domain.EntityId;
 import br.com.ibm.challenge.domain.enumeration.TipoDepositoEnum;
 import lombok.Data;

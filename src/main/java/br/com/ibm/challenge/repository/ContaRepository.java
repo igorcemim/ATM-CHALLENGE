@@ -1,6 +1,6 @@
 package br.com.ibm.challenge.repository;
 
-import br.com.ibm.challenge.domain.Conta;
+import br.com.ibm.challenge.domain.cliente.Conta;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

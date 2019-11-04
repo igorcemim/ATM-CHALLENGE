@@ -1,6 +1,7 @@
 package br.com.ibm.challenge.service;
 
 import br.com.ibm.challenge.domain.EntityId;
+import br.com.ibm.challenge.domain.exception.BusinessException;
 import br.com.ibm.challenge.domain.exception.EntityNotFoundException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -15,17 +16,17 @@ abstract public class CrudService<T extends EntityId<ID>, ID> {
     private Supplier<EntityNotFoundException> notFoundexceptionSupplier =
             () -> new EntityNotFoundException("Registro nao encontrado.");
 
-    public T create(T entity) {
+    public T create(T entity) throws BusinessException {
         return getRepository().save(entity);
     }
 
-    public T update(T entity) throws EntityNotFoundException {
+    public T update(T entity) throws EntityNotFoundException, BusinessException {
         return getRepository().findById(entity.getId())
                 .map(e -> getRepository().save(e))
                 .orElseThrow(notFoundexceptionSupplier);
     }
 
-    public void delete(ID id) throws EntityNotFoundException {
+    public void delete(ID id) throws EntityNotFoundException, BusinessException {
         getRepository().findById(id)
                 .map(e -> {
                     getRepository().deleteById(e.getId());
