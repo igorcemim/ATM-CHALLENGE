@@ -10,7 +10,7 @@ import java.util.UUID;
 
 @Entity
 @Data
-public class Conta {
+public class Conta implements EntityId<UUID> {
 
     @Id
     @GeneratedValue

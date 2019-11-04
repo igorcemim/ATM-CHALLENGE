@@ -1,5 +1,6 @@
 package br.com.ibm.challenge.domain.movimento;
 
+import br.com.ibm.challenge.domain.EntityId;
 import br.com.ibm.challenge.domain.enumeration.TipoContabilEnum;
 import br.com.ibm.challenge.domain.enumeration.TipoMovimentoEnum;
 import lombok.Data;
@@ -11,7 +12,7 @@ import java.util.UUID;
 
 @Entity
 @Data
-public class Movimento {
+public class Movimento implements EntityId<UUID> {
 
     @Id
     @GeneratedValue

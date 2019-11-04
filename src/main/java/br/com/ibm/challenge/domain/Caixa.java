@@ -9,7 +9,7 @@ import java.util.UUID;
 
 @Entity
 @Data
-public class Caixa {
+public class Caixa implements EntityId<UUID> {
 
     @Id
     @GeneratedValue

@@ -1,6 +1,7 @@
 package br.com.ibm.challenge.domain.movimento;
 
 import br.com.ibm.challenge.domain.Conta;
+import br.com.ibm.challenge.domain.EntityId;
 import br.com.ibm.challenge.domain.enumeration.TipoDepositoEnum;
 import lombok.Data;
 import lombok.ToString;
@@ -10,7 +11,7 @@ import java.util.UUID;
 
 @Entity
 @Data
-public class Deposito {
+public class Deposito implements EntityId<UUID> {
 
     @Id
     @GeneratedValue

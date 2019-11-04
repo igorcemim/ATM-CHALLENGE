@@ -1,6 +1,7 @@
 package br.com.ibm.challenge.domain.movimento;
 
 import br.com.ibm.challenge.domain.Conta;
+import br.com.ibm.challenge.domain.EntityId;
 import lombok.Data;
 import lombok.ToString;
 
@@ -9,7 +10,7 @@ import java.util.UUID;
 
 @Entity
 @Data
-public class Saque {
+public class Saque implements EntityId<UUID> {
 
     @Id
     @GeneratedValue
