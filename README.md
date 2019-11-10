@@ -11,6 +11,20 @@ Você deve criar uma API de Caixa ATM, onde deve ser possível executar operaç�
 ### Depósito
  - Para operações de depósito, devem ser informados os dados necessários como entrada da operação, além do tipo de depósito (DINHEIRO, CHEQUE) e retornar os dados necessários para o comprovante.
 
+#### Exemplo de request 
+
+```sh
+curl --request POST \
+  --url http://localhost:8080/movimento/deposito \
+  --header 'content-type: application/json' \
+  --data '{
+    "valor": "112.50",
+    "depositoContaOrigemNumero": 100,
+    "depositoContaOrigemAgencia": 1,
+    "depositoTipoDeposito": "DINHEIRO"
+}'
+```
+
 ### Transferência
  - Para operações de transferência, devem ser informados os dados necessários para a operação das contas origem e destino, com cenários de validação de saldo e possibilidade de agendamento.
  
