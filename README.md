@@ -7,7 +7,19 @@ Você deve criar uma API de Caixa ATM, onde deve ser possível executar operaç�
 
 ### Saque
  - Para operações de saque, devem ser informados os dados necessários como entrada da operação, e retornar as cédulas que serão retiradas do caixa, além de dados complementares em caso de necessidade. 
- 
+
+#### Exemplo de request
+```sh
+curl --request POST \
+  --url http://localhost:8080/movimento/saque \
+  --header 'content-type: application/json' \
+  --data '{
+    "valor": "10",
+    "saqueContaOrigemNumero": 100,
+    "saqueContaOrigemAgencia": 1
+}'
+```
+
 ### Depósito
  - Para operações de depósito, devem ser informados os dados necessários como entrada da operação, além do tipo de depósito (DINHEIRO, CHEQUE) e retornar os dados necessários para o comprovante.
 
