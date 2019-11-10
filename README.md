@@ -5,6 +5,18 @@ Você deve criar uma API de Caixa ATM, onde deve ser possível executar operaç�
 
 * Para as operações estarem disponíveis o caixa deve estar aberto, ou seja, deve ser previsto operações de abertura e fechamento de caixa.
 
+### Executar a aplicação
+```sh
+docker-compose up
+```
+
+### Contas para teste
+| Número | Agência | Saldo Inicial |
+|--------|---------|---------------|
+| 100    |       1 |        110.50 |
+| 200    |       1 |             0 |
+| 300    |       2 |       3000.99 |
+
 ### Saque
  - Para operações de saque, devem ser informados os dados necessários como entrada da operação, e retornar as cédulas que serão retiradas do caixa, além de dados complementares em caso de necessidade. 
 
