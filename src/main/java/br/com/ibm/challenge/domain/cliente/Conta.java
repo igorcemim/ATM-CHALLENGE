@@ -1,12 +1,10 @@
 package br.com.ibm.challenge.domain.cliente;
 
 import br.com.ibm.challenge.domain.EntityId;
+import br.com.ibm.challenge.domain.converter.SaldoConverter;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import java.math.BigDecimal;
+import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
@@ -21,6 +19,7 @@ public class Conta implements EntityId<UUID> {
 
     private Integer agencia;
 
-    private BigDecimal saldo;
+    @Convert(converter = SaldoConverter.class)
+    private Saldo saldo;
 
 }
