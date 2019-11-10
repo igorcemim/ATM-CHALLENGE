@@ -17,6 +17,10 @@ docker-compose up
 | 200    |       1 |             0 |
 | 300    |       2 |       3000.99 |
 
+
+### Documentaçao da API
+http://localhost:8080/swagger-ui.html
+
 ### Saque
  - Para operações de saque, devem ser informados os dados necessários como entrada da operação, e retornar as cédulas que serão retiradas do caixa, além de dados complementares em caso de necessidade. 
 
