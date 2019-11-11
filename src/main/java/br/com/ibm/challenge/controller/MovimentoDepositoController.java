@@ -33,7 +33,7 @@ public class MovimentoDepositoController {
 
     @PostMapping("/movimento/deposito")
     @ResponseStatus(HttpStatus.CREATED)
-    public MovimentoDepositoResponseDto criarDeposito(@Valid @RequestBody MovimentoDepositoRequestDto request) throws BusinessException {
+    public MovimentoDepositoResponseDto criarDeposito(@Valid @RequestBody MovimentoDepositoRequestDto request) {
         Movimento movimento = requestConverter.convert(request);
         service.processar(TipoMovimentoEnum.DEPOSITO, movimento);
         return responseConverter.convert(movimento);

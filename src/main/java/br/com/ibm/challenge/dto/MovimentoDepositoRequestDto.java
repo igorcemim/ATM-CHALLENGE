@@ -9,16 +9,16 @@ import java.math.BigDecimal;
 @Data
 public class MovimentoDepositoRequestDto {
 
-    @NotNull
+    @NotNull(message = "O campo Valor é de preenchimento obrigatório.")
     private BigDecimal valor;
 
-    @NotNull
+    @NotNull(message = "O campo Número da Conta é de preenchimento obrigatório.")
     private Integer depositoContaOrigemNumero;
 
-    @NotNull
+    @NotNull(message = "O campo Agência da Conta é de preenchimento obrigatório.")
     private Integer depositoContaOrigemAgencia;
 
-    @NotNull
+    @NotNull(message = "O campo Tipo de Depósito é de preenchimento obrigatório.")
     private TipoDepositoEnum depositoTipoDeposito;
 
 }
