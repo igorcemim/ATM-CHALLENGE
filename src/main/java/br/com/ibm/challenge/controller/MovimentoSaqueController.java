@@ -3,7 +3,6 @@ package br.com.ibm.challenge.controller;
 import br.com.ibm.challenge.converter.MovimentoSaqueRequestConverter;
 import br.com.ibm.challenge.converter.MovimentoSaqueResponseConverter;
 import br.com.ibm.challenge.domain.enumeration.TipoMovimentoEnum;
-import br.com.ibm.challenge.domain.exception.BusinessException;
 import br.com.ibm.challenge.domain.movimento.Movimento;
 import br.com.ibm.challenge.dto.MovimentoSaqueRequestDto;
 import br.com.ibm.challenge.dto.MovimentoSaqueResponseDto;
