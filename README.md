@@ -10,6 +10,11 @@ Você deve criar uma API de Caixa ATM, onde deve ser possível executar operaç�
 docker-compose up
 ```
 
+### Executar testes
+```sh
+mvn test
+```
+
 ### Contas para teste
 | Número | Agência | Saldo Inicial |
 |--------|---------|---------------|
