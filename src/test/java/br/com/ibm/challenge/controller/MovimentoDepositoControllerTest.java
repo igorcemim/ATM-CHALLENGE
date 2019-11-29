@@ -1,5 +1,6 @@
 package br.com.ibm.challenge.controller;
 
+import br.com.ibm.challenge.ApplicationTests;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.hamcrest.Matchers;
@@ -9,7 +10,7 @@ import org.springframework.http.HttpStatus;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MovimentoDepositoControllerTest {
+public class MovimentoDepositoControllerTest extends ApplicationTests {
 
     @Test
     public void deveRetornarErrorAoSalvarSemInformarOsDados() {
